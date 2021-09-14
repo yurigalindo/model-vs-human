@@ -37,7 +37,6 @@ class ModelEvaluator:
         for metric in dataset.metrics:
             metric.reset()
         with torch.no_grad():
-            model = model.to(device())
             result_writer = e.ResultPrinter(model_name=model_name,
                                             dataset=dataset)
 
